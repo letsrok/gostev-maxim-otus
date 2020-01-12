@@ -1,3 +1,5 @@
+'use scrict'
+
 async function promiseReduce(functionsPromises = [], reduce, initialValue = 0) {
   return functionsPromises.reduce(
     (func, fun) => func.then(
