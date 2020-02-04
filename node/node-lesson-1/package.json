@@ -1,0 +1,17 @@
+{
+  "name": "lesson-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "syncRequest": "node -e 'require(\"./request\").sync(10)'",
+    "asyncRequest": "node -r dotenv/config -e 'require(\"./src/request\").async(15)'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
