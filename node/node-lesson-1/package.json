@@ -5,8 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start": "node server.js"
     },
+=======
+    "start": "node server.js",
+    "syncRequest": "node -e 'require(\"./request\").sync(10)'",
+    "asyncRequest": "node -r dotenv/config -e 'require(\"./src/request\").async(15)'"
+  },
+>>>>>>> 92e76ebb831c82f50abe3eaf8ac8a0bda53bc039
   "author": "",
   "license": "ISC",
   "dependencies": {
