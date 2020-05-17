@@ -1,0 +1,18 @@
+.game {
+
+  &-word {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%!important;
+  }
+
+  .example-full-width {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+  }
+}
