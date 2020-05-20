@@ -1,0 +1,32 @@
+<div class="wrap wrap-small  wrap-pad-25">
+  <div class="settings">
+    <h1>Settings</h1>
+    <mat-form-field>
+      <mat-label>Language</mat-label>
+      <mat-select>
+        <mat-option value="English">
+          English
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Number of words</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let num of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]" [value]="num">
+          {{num}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Time(minutes)</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let time of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]" [value]="time">
+          {{time}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+  </div>
+</div>
