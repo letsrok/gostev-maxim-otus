@@ -1,0 +1,21 @@
+<div class="wrap wrap-small  wrap-pad-25">
+  <div class="words">
+    <p *ngFor="let word of lastWords">
+      {{word.en}} - {{word.ru}}
+    </p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>New word</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" >
+    <mat-label>translate word</mat-label>
+    <input matInput disabled>
+  </mat-form-field>
+  <br>
+  <br>
+  <button mat-raised-button class="mat-primary" [disabled]="isFetch">Add new</button>
+</div>
