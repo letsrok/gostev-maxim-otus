@@ -1,0 +1,39 @@
+<div class="wrap wrap-small  wrap-pad-25">
+  <div class="settings">
+    <h1>Settings</h1>
+    <mat-form-field>
+      <mat-label>Language from</mat-label>
+      <mat-select [(value)]="translateDirectionFrom" (selectionChange)="changeLangDirectionFrom()">
+        <mat-option value="ru">Russian</mat-option>
+        <mat-option value="en">English</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="space"></div>
+    <mat-form-field>
+      <mat-label>Language to</mat-label>
+      <mat-select [(value)]="translateDirectionTo" (selectionChange)="changeLangDirectionTo()">
+        <mat-option value="ru">Russian</mat-option>
+        <mat-option value="en">English</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Number of words</mat-label>
+      <mat-select [(value)]="numberOfWords" (selectionChange)="changeNumberOfWords()">
+        <mat-option *ngFor="let num of [5,10,15,20]" [value]="num">
+          {{num}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Time(minutes)</mat-label>
+      <mat-select [(value)]="gameTime" (selectionChange)="changeGameTime()">
+        <mat-option *ngFor="let time of [5,10,15,20]" [value]="time">
+          {{time}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+  </div>
+</div>
