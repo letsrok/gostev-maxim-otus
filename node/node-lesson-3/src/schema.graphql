@@ -1,0 +1,47 @@
+type Product {
+    id: Int!
+    name: String!
+    description: String
+    price: Int
+    producer: Int
+    count: Int
+}
+
+type User {
+    id: Int!
+    name: String!
+    mail: String!
+    phone: Int
+    age: Int
+}
+
+type Order {
+    id: Int!
+    products: [Product]
+    orderBy: Int
+}
+
+type Query {
+    product(id: Int!): Product,
+    products: [Product!],
+    order(id: Int): Order,
+    orders: [Order!]!,
+    user(id: Int): User!,
+    users: [User!]!,
+}
+
+type Mutation {
+  createUser(id: Int!, name: String!, mail: String!, phone: Int!, age: Int): User!
+  updateUser(id: Int!, name: String, mail: String, phone: Int!, age: Int): User!
+  deleteUser(id: Int!): User!
+
+  createProduct(id: Int!,name: String!, description: String!, price: Int!, producer: Int!, count: Int!): Product
+  updateProduct(id: Int!,name: String, description: String, price: Int, producer: Int, count: Int): Product
+  deleteProduct(id:Int!): Product
+
+  createOrder(id: Int!, products: Int!, orderBy: Int!): Order
+  updateOrder(id: Int!, products: Int, orderBy: Int): Order
+  deleteOrder(id:Int!): Order
+
+}
+
