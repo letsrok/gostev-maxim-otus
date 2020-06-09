@@ -1,0 +1,25 @@
+<div class="wrap wrap-small  wrap-pad-25">
+  <div class="game">
+    <button mat-raised-button class="mat-primary" (click)="gameStart()" *ngIf="!isGameRun" id="game-start">Start Game</button>
+    <div *ngIf="isGameRun">
+      <div class="game-word">{{wordFrom}}</div>
+      <mat-form-field class="example-full-width">
+        <input matInput [(ngModel)]="wordTo" (keyup.enter)="gameNext()">
+      </mat-form-field>
+      <br>
+      <br>
+      <button mat-raised-button class="mat-primary" (click)="gameNext()" >Next</button>
+      <br>
+      <br>
+      <div class="game__res">
+        <p>right words - {{rightCount}} / count - {{count}}</p>
+        <p>total count - {{totalCount}}</p>
+      </div>
+      <div class="game__timer">
+        {{gameTime | timer }}
+      </div>
+    </div>
+
+  </div>
+
+</div>

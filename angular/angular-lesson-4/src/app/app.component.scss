@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    list-style: none;
+    margin: 0 15px;
+    font-size: 25px;
+  }
+
+  a.cdk-focused,
+  a.active{
+    color: red;
+  }
+}
+

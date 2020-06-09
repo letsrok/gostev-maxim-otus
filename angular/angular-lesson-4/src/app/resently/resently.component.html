@@ -1,0 +1,28 @@
+<div class="wrap wrap-small  wrap-pad-25">
+  <div class="words">
+    <p *ngFor="let word of lastWords">
+      {{word.en}} - {{word.ru}}
+    </p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>New word</mat-label>
+    <input matInput [(ngModel)]="wordToTranslate" (input)="isCanAddWord = false" (keyup.enter)="translateWord()">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" >
+    <mat-label>translate word</mat-label>
+    <input matInput disabled [(ngModel)]="wordFromTranslate">
+  </mat-form-field>
+  <br>
+  <br>
+  <button mat-raised-button class="mat-primary" [disabled]="isFetch" (click)="translateWord()" id="btn-translate">Get Translate</button>
+  <br>
+  <br>
+  <br>
+  <div *ngIf="isCanAddWord">
+    <p>{{wordToTranslate}} (lang - {{transFrom}}) - {{wordFromTranslate}} (lang - {{transTo}})</p>
+    <button mat-raised-button class="mat-primary" (click)="addWord()">add word to dictonary</button>
+  </div>
+</div>
